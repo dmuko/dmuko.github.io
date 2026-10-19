@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dmulife Privacy Policy</title>
+<meta name="description" content="How dmulife handles your data.">
+<style>
+  :root { --bg: #fbfbfa; --fg: #1d1d1f; --muted: #6e6e73; --accent: #3a6df0; --line: #e3e3e0; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #161617; --fg: #f2f2f2; --muted: #a1a1a6; --accent: #7a9cff; --line: #2c2c2e; } }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 64px 20px; }
+  h1 { font-size: 34px; margin: 0 0 4px; letter-spacing: -0.02em; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  .meta { color: var(--muted); margin: 0 0 32px; }
+  a { color: var(--accent); }
+  ul { padding-left: 20px; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="meta">dmulife · Last updated October 19, 2026</p>
+
+  <p>dmulife is a macOS app for tasks, calendar and daily planning. This policy explains what data the app handles and where it goes. In short: dmulife has no server of its own, collects no analytics, and never sells or shares your data.</p>
+
+  <h2>Where your data is stored</h2>
+  <ul>
+    <li><strong>On your Mac.</strong> Tasks, projects, calendar events, inbox items and settings are stored in the app's sandboxed container on your Mac.</li>
+    <li><strong>In your iCloud account.</strong> If you are signed in to iCloud, your tasks, projects, tags, plans and settings sync between your Macs through your own private iCloud database (Apple CloudKit). The developer cannot access it. Calendar events and email data are not synced through iCloud.</li>
+    <li><strong>In your Keychain.</strong> Sign-in tokens for connected accounts and your Anthropic API key are kept in the macOS Keychain.</li>
+  </ul>
+
+  <h2>Google user data</h2>
+  <p>When you connect a Google account, dmulife asks for access to:</p>
+  <ul>
+    <li><strong>Your basic profile and email address</strong>, to show which account is connected.</li>
+    <li><strong>Google Calendar</strong> (read calendars, create and edit events), to show your events next to your tasks and to let you create, move and edit events from the app.</li>
+    <li><strong>Gmail</strong> (read and modify), only if you turn on Gmail for that account in Settings. dmulife reads the metadata of threads in the labels you choose (sender, subject, snippet) to show them in its inbox. It reads a thread's messages only when you open a preview, keeps them in memory while the app runs, and never stores or syncs message bodies. Changes it makes are the ones you ask for: unstarring, archiving and marking as read.</li>
+  </ul>
+  <p>Google data goes directly between your Mac and Google. It is not sent to the developer or to any server operated by the developer, and it is not used for advertising or to train AI models.</p>
+  <p>dmulife's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>Slack and iCloud calendars</h2>
+  <p>If you connect Slack, dmulife finds messages that mention you, messages you have marked with your chosen emoji, and unread direct messages, so you can turn them into tasks. It reads a message's conversation only when you open a preview and keeps it in memory while the app runs. It never posts messages or marks anything as read; the only change it makes is removing your emoji when the task is done. If you connect iCloud calendars, dmulife reads and edits events through Apple's CalDAV service. In both cases the data goes directly between your Mac and that service.</p>
+
+  <h2>Optional AI assistance</h2>
+  <p>AI features are off by default. They work only after you add your own Anthropic API key and turn on a feature. When a feature runs, dmulife sends only the data that feature needs directly to Anthropic's API under your key. For example, an email suggestion sends the email's subject, sender and snippet, never the message body; day planning sends your open tasks and busy times. Anthropic handles this data under its <a href="https://www.anthropic.com/legal">commercial terms and privacy policy</a>.</p>
+
+  <h2>What dmulife does not do</h2>
+  <ul>
+    <li>No analytics, tracking or advertising.</li>
+    <li>No developer-run servers: nothing you do in the app reaches the developer.</li>
+    <li>No selling or sharing of your data with third parties.</li>
+  </ul>
+
+  <h2>Deleting your data</h2>
+  <p>Disconnecting an account in <strong>Settings › Accounts</strong> revokes dmulife's access, removes its tokens from the Keychain, and deletes that account's calendars and events from your Mac. You can also revoke access at any time in your <a href="https://myaccount.google.com/permissions">Google Account permissions</a> or in Slack. Deleting the app and its container removes local data, and data synced to iCloud can be removed in <strong>System Settings › Apple Account › iCloud › Manage storage</strong>.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the updated version is published on this page with a new date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:teemu@kluuvigroup.com">teemu@kluuvigroup.com</a></p>
+
+  <footer><a href="../">dmulife</a></footer>
+</main>
+</body>
+</html>
