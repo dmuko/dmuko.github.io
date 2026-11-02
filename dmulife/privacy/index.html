@@ -21,16 +21,28 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="meta">dmulife · Last updated October 19, 2026</p>
+  <p class="meta">dmulife · Last updated November 2, 2026</p>
 
-  <p>dmulife is a macOS app for tasks, calendar and daily planning. This policy explains what data the app handles and where it goes. In short: dmulife has no server of its own, collects no analytics, and never sells or shares your data.</p>
+  <p>dmulife is an app for Mac and iPhone for tasks, calendar and daily planning. This policy explains what data the app handles and where it goes. In short: by default your data stays on your devices and in your own iCloud. If you choose dmulife Cloud, dmulife's own sync service, your data is also stored on dmulife's servers in the EU. dmulife collects no analytics, and never sells or shares your data.</p>
 
   <h2>Where your data is stored</h2>
   <ul>
-    <li><strong>On your Mac.</strong> Tasks, projects, calendar events, inbox items and settings are stored in the app's sandboxed container on your Mac.</li>
-    <li><strong>In your iCloud account.</strong> If you are signed in to iCloud, your tasks, projects, tags, plans and settings sync between your Macs through your own private iCloud database (Apple CloudKit). The developer cannot access it. Calendar events and email data are not synced through iCloud.</li>
-    <li><strong>In your Keychain.</strong> Sign-in tokens for connected accounts and your Anthropic API key are kept in the macOS Keychain.</li>
+    <li><strong>On your devices.</strong> Tasks, projects, calendar events, inbox items and settings are stored in the app's sandboxed container on your Mac and iPhone.</li>
+    <li><strong>In your iCloud account</strong>, by default. Your tasks, projects, tags, plans and settings sync between your devices through your own private iCloud database (Apple CloudKit). The developer cannot access it. Calendar events and email data are not synced through iCloud.</li>
+    <li><strong>On dmulife Cloud</strong>, if you choose it in <strong>Settings › Sync</strong> instead of iCloud. See below.</li>
+    <li><strong>In your Keychain.</strong> Sign-in tokens for accounts connected on a device, your dmulife Cloud sign-in and your Anthropic API key are kept in that device's Keychain.</li>
   </ul>
+
+  <h2>dmulife Cloud</h2>
+  <p>dmulife Cloud is optional. You sign in to it with your Apple Account. It stores:</p>
+  <ul>
+    <li><strong>Your account:</strong> the identifier Apple gives dmulife for your Apple Account, and Apple's sign-in token for it, encrypted, which is used only to end the link with Apple when you delete the account.</li>
+    <li><strong>Your synced data:</strong> the tasks, projects, tags, plans, notes and settings that would otherwise sync through iCloud.</li>
+    <li><strong>Your devices:</strong> each device's name, platform and app version, your time zone, and on iPhones the token Apple uses to deliver silent notifications that start a sync.</li>
+    <li><strong>Agent access</strong>, if you use it: access tokens you create for AI agents (kept only as fingerprints), and the apps you connect by signing in, such as Claude, with the access you allowed. An agent you connect reads and changes your plan only as you allow, and what it reads goes to that agent's provider under your agreement with them.</li>
+    <li><strong>Google calendars</strong>, only for Google accounts you choose to sync on dmulife Cloud (see below).</li>
+  </ul>
+  <p>dmulife Cloud runs on servers in Frankfurt, Germany, operated for dmulife by Fly.io. Each customer's data is kept apart, and connections are encrypted. Server logs record identifiers, counts and timings, never the content of your data or any tokens.</p>
 
   <h2>Google user data</h2>
   <p>When you connect a Google account, dmulife asks for access to:</p>
@@ -39,11 +51,11 @@
     <li><strong>Google Calendar</strong> (read calendars, create and edit events), to show your events next to your tasks and to let you create, move and edit events from the app.</li>
     <li><strong>Gmail</strong> (read and modify), only if you turn on Gmail for that account in Settings. dmulife reads the metadata of threads in the labels you choose (sender, subject, snippet) to show them in its inbox. It reads a thread's messages only when you open a preview, keeps them in memory while the app runs, and never stores or syncs message bodies. Changes it makes are the ones you ask for: unstarring, archiving and marking as read.</li>
   </ul>
-  <p>Google data goes directly between your Mac and Google. It is not sent to the developer or to any server operated by the developer, and it is not used for advertising or to train AI models.</p>
-  <p>dmulife's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+  <p>Google data goes directly between your device and Google, with one exception you choose yourself: <strong>Sync on dmulife Cloud</strong> in <strong>Settings › Accounts</strong> on a Mac using dmulife Cloud. For that account, you sign in to Google again and allow dmulife Cloud access to your calendars. dmulife Cloud then keeps Google's sign-in token for the account, encrypted, and the events of its calendars that are turned on in dmulife, from four weeks back to twelve weeks ahead. It uses them to show your calendar to the agents you connect, to count meetings in your free time, and to write your timeboxes to your calendar when no Mac is running. Gmail data never reaches dmulife Cloud.</p>
+  <p>Google data is not used for advertising or to train AI models. dmulife's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 
   <h2>Slack and iCloud calendars</h2>
-  <p>If you connect Slack, dmulife finds messages that mention you, messages you have marked with your chosen emoji, and unread direct messages, so you can turn them into tasks. It reads a message's conversation only when you open a preview and keeps it in memory while the app runs. It never posts messages or marks anything as read; the only change it makes is removing your emoji when the task is done. If you connect iCloud calendars, dmulife reads and edits events through Apple's CalDAV service. In both cases the data goes directly between your Mac and that service.</p>
+  <p>If you connect Slack, dmulife finds messages that mention you, messages you have marked with your chosen emoji, and unread direct messages, so you can turn them into tasks. It reads a message's conversation only when you open a preview and keeps it in memory while the app runs. It never posts messages or marks anything as read; the only change it makes is removing your emoji when the task is done. If you connect iCloud calendars, dmulife reads and edits events through Apple's CalDAV service. In both cases the data goes directly between your device and that service, never through dmulife Cloud.</p>
 
   <h2>Optional AI assistance</h2>
   <p>AI features are off by default. They work only after you add your own Anthropic API key and turn on a feature. When a feature runs, dmulife sends only the data that feature needs directly to Anthropic's API under your key. For example, an email suggestion sends the email's subject, sender and snippet, never the message body; day planning sends your open tasks and busy times. Anthropic handles this data under its <a href="https://www.anthropic.com/legal">commercial terms and privacy policy</a>.</p>
@@ -51,12 +63,12 @@
   <h2>What dmulife does not do</h2>
   <ul>
     <li>No analytics, tracking or advertising.</li>
-    <li>No developer-run servers: nothing you do in the app reaches the developer.</li>
     <li>No selling or sharing of your data with third parties.</li>
+    <li>Without dmulife Cloud, nothing you do in the app reaches the developer.</li>
   </ul>
 
   <h2>Deleting your data</h2>
-  <p>Disconnecting an account in <strong>Settings › Accounts</strong> revokes dmulife's access, removes its tokens from the Keychain, and deletes that account's calendars and events from your Mac. You can also revoke access at any time in your <a href="https://myaccount.google.com/permissions">Google Account permissions</a> or in Slack. Deleting the app and its container removes local data, and data synced to iCloud can be removed in <strong>System Settings › Apple Account › iCloud › Manage storage</strong>.</p>
+  <p>Disconnecting an account in <strong>Settings › Accounts</strong> revokes dmulife's access, removes its tokens from the Keychain, and deletes that account's calendars and events from your devices and from dmulife Cloud. <strong>Stop Syncing on dmulife Cloud</strong> removes an account's calendar data and Google access from dmulife Cloud only. You can also revoke access at any time in your <a href="https://myaccount.google.com/permissions">Google Account permissions</a> or in Slack. <strong>Delete dmulife Cloud Account</strong> in <strong>Settings › Sync</strong> deletes your account and all its data from dmulife Cloud, and ends its access to Apple and Google. Deleting the app and its container removes local data, and data synced to iCloud can be removed in <strong>System Settings › Apple Account › iCloud › Manage storage</strong>.</p>
 
   <h2>Changes</h2>
   <p>If this policy changes, the updated version is published on this page with a new date.</p>
